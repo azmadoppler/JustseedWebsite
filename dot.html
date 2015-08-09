@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+    </style>
+  </head>
+  <body>
+     
+     
+      <button id="button1">click me button1</button>
+      <button id="button2">click me button2</button>
+     
+      <div class="container text-center">
+          <div class="row" style="background-image:  url(mapproj.png); background-position:center; width:880px; height:500px">
+             
+              <div class="col-md-12">
+                  <div class="col-md-6" id="hello">
+                    <canvas id="myCanvas" width="200" height="200"></canvas>
+                  </div>
+                  <div class="col-md-6" id="hello2">
+                    <canvas id="myCanvas2" width="200" height="200"></canvas>
+                  </div>
+              </div>
+          </div>
+     
+        </div>
+     
+ 
+     
+    <script>
+      var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+      var centerX = canvas.width / 2;
+      var centerY = canvas.height / 2;
+      var radius = 17;
+       
+      context.beginPath();
+      context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
+      context.fillStyle = 'green';
+      context.fill();
+      context.lineWidth = 5;
+      context.strokeStyle = 'black';
+      context.stroke();
+       
+      var canvas2 = document.getElementById('myCanvas2');
+      var context2 = canvas2.getContext('2d');
+      var centerX2 = canvas2.width/2;
+      var centerY2 = canvas2.height/2;
+      var radius2 = 17;
+       
+      context2.beginPath();
+      context2.arc(centerX2, centerY2, radius2, 0, 2 * Math.PI, false);
+      context2.fillStyle = 'green';
+      context2.fill();
+      context2.lineWidth = 5;
+      context2.strokeStyle = 'black';
+      context2.stroke();
+       
+        $("#button1").click(function(){
+            context.fillStyle = 'red';
+            context.fill();
+            context.lineWidth = 5;
+            context.strokeStyle = 'black';
+            context.stroke();
+            var check=1;
+            while(check<=10){
+                $("#hello").fadeOut(500);
+                $("#hello").fadeIn();
+            check+=1;
+            }
+        });
+       
+        $("#button2").click(function(){
+            context2.fillStyle = 'red';
+            context2.fill();
+            context2.lineWidth = 5;
+            context2.strokeStyle = 'black';
+            context2.stroke();
+            var check=1;
+            while(check<=10){
+                $("#hello2").fadeOut(500);
+                $("#hello2").fadeIn();
+            check+=1;
+            }
+        });
+       
+       
+       
+    </script>
+  </body>
+</html>

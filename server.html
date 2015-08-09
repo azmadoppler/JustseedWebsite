@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Just Seed Smoke Detector</title>
+        <link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.css">
+        <style>
+            #bg{
+                background-image: url(wallpaper/exceedlogo.jpg);     
+            }
+            #alarm1{
+                 background-color: transparent;
+            }
+            #stop1{
+                 background-color: transparent;
+            }
+            #alarm2{
+                 background-color: transparent;
+            }
+            #stop2{
+                 background-color: transparent;
+            }
+            #log{
+                 background-color: white;
+            }
+            #shallowbg{
+                 background-image: url(wallpaper/bg.png);
+            }
+            #timer1{
+                 font-size: 14pt;
+            }
+            
+            #timer2{
+                 font-size: 14pt;   
+            }
+        </style>
+            
+    </head>
+    <body id="bg">
+       
+       <nav class="navbar navbar-default navbar-fixed-top">
+          <div class="container">
+              <div class="row">
+                  <div class="col-xs-2">
+                        <button type="button" class="btn btn-default navbar-btn "><a = href="index.html">Home</button></a>
+                  </div>
+                  <div class="col-xs-2">
+                        <button type="button" class="btn btn-default navbar-btn "><a = href="server.html">Server Status</button></a>
+                  </div><div class="col-xs-2">
+                        <button type="button" class="btn btn-default navbar-btn "><a = href="product.html">Our product</button></a>
+                  </div><div class="col-xs-2">
+                        <button type="button" class="btn btn-default navbar-btn "><a = href="contract.html">About Us</button></a>
+                  </div>
+                  <div class="col-xs-4">
+                        <button type="button" class="btn btn-default navbar-btn"><a = href="http://www.ku.ac.th">Visit Our University Website</button></a>
+                  </div>
+                  
+                  
+              </div>
+                
+          </div>
+        </nav>
+       
+        <div class="container" >
+          <div class="row" id="shallowbg">
+           <br>
+           <br>    
+           <br>
+            <div class="row text-center">
+                <h1><img src="resources/CurrentWeb.png" alt=""></h1>
+            </div>
+            
+<!--
+                MAP ZONE    
+            <button id="button1">click me button1</button>
+            <button id="button2">click me button2</button>
+-->
+     
+      <div class="container text-center">
+          <div class="col-xs-1"></div>
+          
+          <div class="col-xs-9">
+          <div class="row" style="background-image:  url(resources/map.png); background-position:center; width:880px; height:500px">
+             
+              <div class="col-md-12">
+                  <div class="col-md-6" id="hello2"> 
+                    <canvas id="myCanvas2" width="500" height="200"></canvas>  
+                  </div>
+                  <div class="col-md-6" id="hello">
+                    <canvas id="myCanvas" width="500" height="200"></canvas>
+                  </div>
+              </div>
+          </div>
+         </div>
+        </div>
+<!--       END MAP ZONE    -->
+            
+            <div class="row text-center">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-12"><h1><img src="resources/point1.png" alt=""></h1></div>
+                        <div class="col-md-1"></div>
+                        <div class="col-md-6"><h2><img src="resources/cigstat.png" alt=""></h2></div>
+                        <div class="col-md-3">
+                            <br><img src="resources/safe2.png" id="img1">
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <button type="button" class="btn btn-default navbar-btn" id="alarm1"><img src="resources/al.png" alt=""></button>
+                        
+                        <button type="button" class="btn btn-default navbar-btn" id="stop1"><img src="resources/stop.png" alt=""></button>
+                        
+                    </div>
+                     
+                     <div class="row">
+                       <div class="col-md-6 text-left">
+                        <br>
+                            <img src="resources/sensorState.png">
+                       </div>
+                        <div class="col-md-6">
+                           <br>
+                            <img src="resources/avai.png" id="senstate1">
+                        </div>
+
+                     </div>
+                      
+                      <div class="row">
+                          <div class="col-md-12">
+                            <br><br>
+                              <img src="resources/currentStat.png" alt="">
+                          </div>
+                          
+                          <div class="col-md-12">
+                              <br><span class="slabel label-warning" id="firstdate1">No one has smoke cigarette yet</span> 
+                          </div>
+                          
+                          <div class="col-md-12" >
+                              <br><span class="slabel label-warning" id="seconddate1">No one has smoke cigarette yet</span> 
+                          </div>
+                          
+                          
+                          <div class="col-md-12" >
+                              <div class="col-md-7">
+                                  <img src="resources/timer.jpg" alt="">
+                              </div>
+                              <br>
+                              <div class="col-md-5  text-left" id="timer1">
+                                  0
+                              </div> 
+                              
+                              
+                          </div>
+                          
+                          
+                      </div>
+                </div>
+                  
+                <!--              FOR THE 2ND SPOT-->
+                      
+                  <div class="col-md-6">
+                      <div class="row">
+                          <div class="col-md=12"><h1><img src="resources/point2.png" alt=""></h1></div>
+                          <div class="col-md-1"></div>
+                        <div class="col-md-6"><h2><img src="resources/cigstat.png" alt=""></h2></div>
+                        <div class="col-md-3">
+                            <br><img src="resources/safe2.png" id="img2">
+                        </div>
+                                      </div>
+                                      
+                                      <div class="row">
+                        <button type="button" class="btn btn-default navbar-btn" id="alarm2"><img src="resources/al.png" alt=""></button>
+                        
+                        <button type="button" class="btn btn-default navbar-btn" id="stop2"><img src="resources/stop.png" alt=""></button>
+                        
+                                      </div>
+                    <div class="row">
+                       <div class="col-md-6 text-left">
+                        <br>
+                            <img src="resources/sensorState.png">
+                       </div>
+                        <div class="col-md-6">
+                           <br>
+                            <img src="resources/avai.png" id="senstate2">
+                        </div>
+
+                     </div>
+                      
+                      <div class="row">
+                          <div class="col-md-12">
+                            <br><br>
+                              <img src="resources/currentStat.png" alt="">
+                          </div>
+                          
+                          <div class="col-md-12">
+                              <br><span class="slabel label-warning" id="firstdate2">No one has smoke cigarette yet</span> 
+                          </div>
+                          
+                          <div class="col-md-12" >
+                              <br><span class="slabel label-warning" id="seconddate2">No one has smoke cigarette yet</span> 
+                          </div>
+                          
+                          
+                          
+                          <div class="col-md-12" >
+                              <div class="col-md-7">
+                                  <img src="resources/timer.jpg" alt="">
+                              </div>
+                              <br>
+                              <div class="col-md-5  text-left" id="timer2">
+                                 0
+                              </div> 
+                              
+                              
+                          </div>
+                          
+                      </div>
+                  </div>
+            </div>
+              
+                  
+                  
+                  
+              </div>
+              
+              
+              
+                  </div>
+              </div>
+               
+               
+            
+        
+        </div>
+        </div>
+        
+        <script src="jquery-2.1.4.min.js"></script>
+            <script>
+                
+             
+             var snd = new Audio('resources/alert.mp3');
+           
+              //create canvas
+              var canvas = document.getElementById('myCanvas');
+              var context = canvas.getContext('2d');
+              var centerX = canvas.width/10;
+              var centerY = canvas.height / 3;
+              var radius = 17;
+              context.beginPath();
+              context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
+              context.fillStyle = 'green';
+              context.fill();
+              context.lineWidth = 5;
+              context.strokeStyle = 'black';
+              context.stroke();
+              var canvas2 = document.getElementById('myCanvas2');
+              var context2 = canvas2.getContext('2d');
+              var centerX2 = canvas2.width/10;
+              var centerY2 = canvas2.height/2;
+              var radius2 = 17;
+              context2.beginPath();
+              context2.arc(centerX2, centerY2, radius2, 0, 2 * Math.PI, false);
+              context2.fillStyle = 'green';
+              context2.fill();
+              context2.lineWidth = 5;
+              context2.strokeStyle = 'black';
+              context2.stroke();
+                //function start here
+                /*$("#button1").click(function(){
+                    context.fillStyle = 'red';
+                    context.fill();
+                    context.lineWidth = 5;
+                    context.strokeStyle = 'black';
+                    context.stroke();
+                    var check=1;
+                    while(check<=10){
+                        $("#hello").fadeOut(500);
+                        $("#hello").fadeIn();
+                    check+=1;
+                    }
+                });*/
+
+                
+//                $.post("http://exceed.cupco.de/iot/justseed/@push", {title: "Message title", body: "Hello, world!!"});
+                //set1
+                //doing crazy stuff with history log
+                var currentdate1= new Date();
+                var enddate1= new Date();
+                var datetime1 = "";
+                var smokeStartCount1 = 0;
+                var smokeStopCount1 = -1;
+                var alertState1 = false;
+                var senAvaliable1 = true;
+                
+                //set2
+                var currentdate2= new Date();
+                var enddate2= new Date();
+                var datetime2 = "";
+                var smokeStartCount2 = 0;
+                var smokeStopCount2 = -1;
+                var alertState2 = false;
+                var senAvaliable2 = true;
+                
+                
+                //counter function
+                
+                var timer1=0;
+                var timer2=0;
+                
+                $.get("http://exceed.cupco.de/iot/justseed1/timer" , getTimer1);
+                $.get("http://exceed.cupco.de/iot/justseed/timer" , getTimer2);
+                
+                function getTimer1(message) {
+                    timer1 = parseInt(message);
+                    $("#timer1").text(timer1);
+                    
+                }
+                
+                function getTimer2(message) {
+                    
+                    timer2 = parseInt(message);
+                    $("#timer2").text(timer2);
+                    
+                }
+                
+                
+                function sendStatusToServer1(){ 
+                    if(alertState1 == true)
+                    {
+                        $.post("http://exceed.cupco.de/iot/justseed1/web", { data : "1" } ) ; 
+                    }
+                    else
+                    {
+                        $.post("http://exceed.cupco.de/iot/justseed1/web", { data : "0" } ) ; 
+                    }
+                }
+                
+                
+                function sendStatusToServer(){
+                    if(alertState2 == true)
+                    {
+                        $.post("http://exceed.cupco.de/iot/justseed/web", { data : "1" } ) ;
+                    }
+                    else
+                    {
+                        $.post("http://exceed.cupco.de/iot/justseed/web", { data : "0" } ) ;
+                    }
+                }
+                
+                
+                function stopAlarm1(){
+                     $.post("http://exceed.cupco.de/iot/justseed1/web", { data : "0" } ) ; 
+                }
+                
+                function stopAlarm2(){
+                     $.post("http://exceed.cupco.de/iot/justseed/web", { data : "0" } ) ; 
+                }
+                
+                
+                function refresh(){
+                    $.get("http://exceed.cupco.de/iot/justseed1/board", onGetData1);
+                    $.get("http://exceed.cupco.de/iot/justseed/board", onGetData);
+                    
+                    
+                }
+                
+                function onGetData1(message) {
+                    console.log(message);
+                    if(message.charAt(0)=="1"){
+                       
+                        //alert !!!!!
+                        $("#img1").attr("src","resources/detect2.png");
+                        alertState1 = true;
+                        context.fillStyle = 'red';
+                        context.fill();
+                        context.lineWidth = 5;
+                        context.strokeStyle = 'black';
+                        context.stroke();
+                        $("#hello").fadeOut(500);
+                        $("#hello").fadeIn();
+                    
+                       if( smokeStartCount1 == 0 )
+                       {
+                            $.post("http://exceed.cupco.de/iot/justseed/@push", {title: "CIGARETTE DETECT !!!", body: "Point 1 Detect Cigarette's Smoke"});                     
+                            
+                            snd.play();
+                            currentdate1 = new Date(); 
+                            datetime1 = "Someone is smoking at " + currentdate1.getDate() + "/"
+                            + (currentdate1.getMonth()+1)  + "/" 
+                            + currentdate1.getFullYear() + " @ "  
+                            + currentdate1.getHours() + ":"  
+                            + currentdate1.getMinutes() + ":" 
+                            + currentdate1.getSeconds();
+                            $("#firstdate1").text(datetime1);
+                            smokeStartCount1++;
+                            smokeStopCount1=0;
+                            timer1++;
+                            $.post("http://exceed.cupco.de/iot/justseed1/timer", { data : timer1 } );
+                            $("#timer1").text(timer1);
+                       }
+                       
+                   }
+                    else if(message.charAt(0)=="0"){
+                        
+                        alertState1 = false;
+                        $("#img1").attr("src","resources/safe2.png");
+                        if( smokeStopCount1 == 0 )
+                        {
+                            context.fillStyle = 'green';
+                            context.fill();
+                            context.lineWidth = 5;
+                            context.strokeStyle = 'black';
+                            context.stroke();
+                            $.post("http://exceed.cupco.de/iot/justseed1/web", { data : "0" } ) ;
+                            enddate1 = new Date(); 
+                            datetime1 = "It stop at " + enddate1.getDate() + "/"
+                            + (enddate1.getMonth()+1)  + "/" 
+                            + enddate1.getFullYear() + " @ "  
+                            + enddate1.getHours() + ":"  
+                            + enddate1.getMinutes() + ":" 
+                            + enddate1.getSeconds();
+                            $("#seconddate1").text(datetime1);
+                            smokeStopCount1++;
+                            smokeStartCount1=0;
+                        }
+                    }     
+                    if( message.charAt(1) == "1" && senAvaliable1) {
+                        context.fillStyle = 'yellow';
+                        context.fill();
+                        context.lineWidth = 5;
+                        context.strokeStyle = 'black';
+                        context.stroke();
+                        $("#senstate1").attr("src","resources/fail.png");   
+                        senAvaliable1 = false;
+                    } else if( message.charAt(1) == "0" && !senAvaliable1 ) {
+                        senAvaliable1 = true;
+                        context.fillStyle = 'green';
+                            context.fill();
+                            context.lineWidth = 5;
+                            context.strokeStyle = 'black';
+                            context.stroke();
+                        $("#senstate1").attr("src","resources/avai.png");  
+                    }
+                
+                }
+                
+                function onGetData(message) {
+                    console.log(message);
+                    if(message.charAt(0)=="1"){
+                       
+                        //alert !!!!!
+                       $("#img2").attr("src","resources/detect2.png");
+                       alertState2 = true;
+                       context2.fillStyle = 'red';
+                       context2.fill();
+                       context2.lineWidth = 5;
+                       context2.strokeStyle = 'black';
+                       context2.stroke();  
+                       $("#hello2").fadeOut(500);
+                       $("#hello2").fadeIn();
+                       if( smokeStartCount2 == 0 )
+                       {   
+                           $.post("http://exceed.cupco.de/iot/justseed/@push", {title: "CIGARETTE DETECT !!!", body: "Point 2 Detect Cigarette's Smoke"});
+                            
+                            snd.play();
+                            currentdate2 = new Date(); 
+                            datetime2 = "Someone is smoking at " + currentdate2.getDate() + "/"
+                            + (currentdate2.getMonth()+1)  + "/" 
+                            + currentdate2.getFullYear() + " @ "  
+                            + currentdate2.getHours() + ":"  
+                            + currentdate2.getMinutes() + ":" 
+                            + currentdate2.getSeconds();
+                            $("#firstdate2").text(datetime2);
+                            smokeStartCount2++;
+                            smokeStopCount2=0;
+                            timer2++;
+                            $.post("http://exceed.cupco.de/iot/justseed/timer", { data : timer2 } );
+                            $("#timer2").text(timer2);
+                            
+                       }
+                       
+                   }
+                    else if(message.charAt(0)=="0"){
+                        alertState2 = false;
+                        $("#img2").attr("src","resources/safe2.png");
+                        if( smokeStopCount2 == 0 )
+                        { 
+                            context2.fillStyle = 'green';
+                            context2.fill();
+                            context2.lineWidth = 5;
+                            context2.strokeStyle = 'black';
+                            context2.stroke();  
+                            $.post("http://exceed.cupco.de/iot/justseed/web", { data : "0" } ) ;
+                            enddate2 = new Date(); 
+                            datetime2 = "It stop at " + enddate2.getDate() + "/"
+                            + (enddate2.getMonth()+1)  + "/" 
+                            + enddate2.getFullYear() + " @ "  
+                            + enddate2.getHours() + ":"  
+                            + enddate2.getMinutes() + ":" 
+                            + enddate2.getSeconds();
+                            $("#seconddate2").text(datetime2);
+                            smokeStopCount2++;
+                            smokeStartCount2=0;
+                        }
+                    }     
+                    if( message.charAt(1) == "1" && senAvaliable2) {
+                        $.post("http://exceed.cupco.de/iot/justseed/@push", {title: "Our Device Has Failed !", body: "Point 1 Device Might be Malfunction"});
+                        context2.fillStyle = 'yellow';
+                       context2.fill();
+                       context2.lineWidth = 5;
+                       context2.strokeStyle = 'black';
+                       context2.stroke(); 
+                        $("#senstate2").attr("src","resources/fail.png");   
+                        senAvaliable2 = false;
+                    } else if( message.charAt(1) == "0" && !senAvaliable2) {
+                        senAvaliable2 = true;
+                        context2.fillStyle = 'green';
+                       context2.fill();
+                       context2.lineWidth = 5;
+                       context2.strokeStyle = 'black';
+                       context2.stroke(); 
+                        $.post("http://exceed.cupco.de/iot/justseed/@push", {title: "Our Device Has Failed !", body: "Point 2 Device Might be Malfunction"});
+                        $("#senstate2").attr("src","resources/avai.png");  
+                    }
+                
+                }
+                
+                
+                setInterval(refresh , 1000);
+                
+                
+                $("#alarm1").click(sendStatusToServer1);
+                $("#stop1").click(stopAlarm1);
+                $("#alarm2").click(sendStatusToServer);
+                $("#stop2").click(stopAlarm2);
+                
+                
+                
+                
+                
+             
+    </script>
+    
+    </body>
+    
+</html>
+
+               
+               
+<!--
+            <div class="row text-center">
+                <div class="col-md-3"></div>
+                <div class="col-md-3"><h2><br><br>Cigarette Status</h2></div>
+                <div class="col-md-3">
+                    <br><br><br><h2><span class="slabel label-success" id="status2">EMPTY</span> </h2>
+                </div>
+            </div>
+-->
+            
